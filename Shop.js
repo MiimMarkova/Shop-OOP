@@ -20,7 +20,7 @@ function Shop () {
 		return products;
 	}
 	
-	this.setProducts = function (newProduct) {
+	this.addProduct = function (newProduct) {
 		products.push(newProduct);
 	}
 	
@@ -28,7 +28,7 @@ function Shop () {
 
 Shop.prototype.productFactory = function  (name, price, quantity) {
 	var product = new Product (name, price, quantity);
-	this.setProducts(product);
+	this.addProduct(product);
 
 }
 
@@ -38,11 +38,12 @@ Shop.prototype.factoryBundle = function (products) {
 	var quantity = 1;
 	for (var i = 0; i < products.length; i++){
 		
-		name += products[i].getName();
+		name += products[i].getName() + '+';
 		price += products[i].getPrice();
 		
 	}
 	
 	var bundle = new Bundle(name, price, quantity);
+	console.log(bundle.getName())
 	this.setProducts(bundle);
 }
