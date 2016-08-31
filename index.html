@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "text/javascript" src = "Shop.js"></script>
+<script type = "text/javascript" src = "Product.js"></script>
+<script type = "text/javascript" src = "CheckOut.js"></script>
+<script type = "text/javascript" src = "Bundle.js"></script>
+</head>
+<body>
+
+<script>
+	var shop = new Shop();
+	var milk = new Product('milk', 2, 4);
+	var cheese = new Product('cheese', 3, 5);
+	
+	shop.factoryBundle([milk, cheese]);
+	
+	
+
+	</script>
+</body>
+</html>
